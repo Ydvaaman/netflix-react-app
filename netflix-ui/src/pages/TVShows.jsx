@@ -47,7 +47,7 @@ function TVShows() {
       <Navbar isScrolled={isScrolled} />
       <div className="data">
         <SelectGenre genres={genres} type="tv" />
-        {movies.length ? (
+        {movies ? (
           <>
             <Slider movies={movies} />
           </>
