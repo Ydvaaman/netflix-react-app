@@ -16,6 +16,10 @@ mongoose.connect(process.env.MONGO_URL,{
     console.log(err.message);
 });
 
+app.get("/",(req,res)=>{
+    res.status(200).json({"message":"Hey, I'm Up !"})
+})
+
 app.use("/api/user",userRoutes);
 
 app.listen(5000,() => {
